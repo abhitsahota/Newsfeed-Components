@@ -50,16 +50,18 @@ function componentCreator(array) {
     listContainer.appendChild(listItem)
   });
 
+  let toggle = () => {
+    component.classList.toggle('menu--open')}
+  
+  
+  let menuButt = document.querySelector('.menu-button')
+  
+  menuButt.addEventListener('click', toggle)
+  
   console.log(listContainer)
   return component
 }
 
-let toggle = () => {
-  component.classList.toggle('menu--open')}
 
-
-let menuButt = document.querySelector('.menu-button')
-
-menuButt.addEventListener('click', toggle)
 
 componentCreator(menuItems)
